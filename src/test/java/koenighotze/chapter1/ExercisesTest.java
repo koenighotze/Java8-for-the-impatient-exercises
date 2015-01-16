@@ -3,12 +3,7 @@ package org.koenighotze.chapter1;
 import org.junit.Test;
 
 import java.io.File;
-import java.util.*;
-import java.util.concurrent.Callable;
-import java.util.function.BiConsumer;
-import java.util.function.Function;
-import java.util.stream.Collector;
-import java.util.stream.Collectors;
+import java.util.Arrays;
 import java.util.stream.Stream;
 
 import static java.util.Comparator.*;
