@@ -18,7 +18,7 @@ import static org.junit.Assert.assertNotNull;
 /**
  * Created by dschmitz on 16.01.15.
  */
-public class Ex22 {
+public class Ex22Test {
     private List<String> words;
 
     @Before

@@ -14,7 +14,7 @@ import static org.junit.Assert.assertThat;
 /**
  * Created by dschmitz on 12.02.15.
  */
-public class Ex28 {
+public class Ex28Test {
     public static <T> Stream<T> zip(Stream<T> first, Stream<T> second) {
 //        Iterator<T> firstiterator = first.iterator();
 //        Iterator<T> seconditerator = second.iterator();

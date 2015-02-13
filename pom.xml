@@ -24,7 +24,6 @@
             <artifactId>junit</artifactId>
             <scope>test</scope>
             <version>4.11</version>
-            <type>jar</type>
         </dependency>
     </dependencies>
 </project>

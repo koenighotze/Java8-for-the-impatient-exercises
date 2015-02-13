@@ -8,7 +8,7 @@ import java.util.stream.Stream;
 /**
  * Created by dschmitz on 10.02.15.
  */
-public class Ex25 {
+public class Ex25Test {
 
     private Stream<Long> createStream(long seed, long a, long m, long c) {
 

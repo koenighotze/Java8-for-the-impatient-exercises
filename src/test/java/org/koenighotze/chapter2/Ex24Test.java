@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 /**
  * Created by dschmitz on 10.02.15.
  */
-public class Ex24 {
+public class Ex24Test {
 
 
     @Test

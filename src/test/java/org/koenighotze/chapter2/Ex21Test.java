@@ -20,12 +20,12 @@ import static org.junit.Assert.assertThat;
 /**
  * Created by dschmitz on 16.01.15.
  */
-public class Ex21 {
+public class Ex21Test {
     private static List<String> words;
 
     @BeforeClass
     public static void setup() throws Exception {
-        words = ResourceReader.getLargeWordsFromBook();
+        words = ResourceReader.getWordsFromBook();
     }
 
 

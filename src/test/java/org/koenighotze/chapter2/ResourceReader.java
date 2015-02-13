@@ -1,7 +1,5 @@
 package org.koenighotze.chapter2;
 
-import org.junit.Before;
-
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
@@ -16,7 +14,7 @@ import static org.junit.Assert.assertNotNull;
  */
 public class ResourceReader {
     public static List<String> getLargeWordsFromBook() throws Exception {
-        URL alice = Ex21.class.getResource("/pg2600.txt");
+        URL alice = Ex21Test.class.getResource("/pg2600.txt");
         assertNotNull(alice);
         String contents = new String(Files.readAllBytes(
                 Paths.get(alice.toURI())), StandardCharsets.UTF_8);
@@ -30,7 +28,7 @@ public class ResourceReader {
     }
 
     public static List<String> getWordsFromBook() throws Exception {
-        URL alice = Ex21.class.getResource("/alice.txt");
+        URL alice = Ex21Test.class.getResource("/alice.txt");
         assertNotNull(alice);
         String contents = new String(Files.readAllBytes(
                 Paths.get(alice.toURI())), StandardCharsets.UTF_8);

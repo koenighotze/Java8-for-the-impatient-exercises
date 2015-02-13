@@ -16,7 +16,7 @@ import static org.junit.Assert.assertThat;
 /**
  * Created by dschmitz on 12.02.15.
  */
-public class Ex29 {
+public class Ex29Test {
 
     private Stream<ArrayList<String>> stream;
     private ArrayList<String> expected = new ArrayList<>(Arrays.asList("Die", "For", "tu", "na"));

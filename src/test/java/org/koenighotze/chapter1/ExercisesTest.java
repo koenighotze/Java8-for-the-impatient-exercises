@@ -10,6 +10,8 @@ import static java.util.Comparator.*;
 /**
  * Created by dschmitz on 15.12.14.
  */
+
+@org.junit.Ignore
 public class ExercisesTest {
 
 

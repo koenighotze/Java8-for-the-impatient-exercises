@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 /**
  * Created by dschmitz on 10.02.15.
  */
-public class Ex26 {
+public class Ex26Test {
 
     private Stream<Character> characterStream(String s) {
         List<Character> res = new ArrayList<>();
