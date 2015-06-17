@@ -1,26 +1,25 @@
 package org.koenighotze.chapter3;
 
-import javafx.embed.swing.SwingFXUtils;
-import  javafx.scene.image.*;
-import javafx.scene.paint.Color;
-import org.junit.Test;
+import static javafx.embed.swing.SwingFXUtils.fromFXImage;
+import static javafx.scene.paint.Color.WHITE;
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.CoreMatchers.not;
+import static org.hamcrest.CoreMatchers.nullValue;
+import static org.junit.Assert.assertThat;
 
-import javax.imageio.ImageIO;
-
-import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.util.stream.IntStream;
+import javax.imageio.ImageIO;
 
-import static java.lang.String.format;
-import static javafx.embed.swing.SwingFXUtils.*;
-import static javafx.scene.paint.Color.WHITE;
-import static org.hamcrest.CoreMatchers.*;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertThat;
+import javafx.scene.image.Image;
+import javafx.scene.image.WritableImage;
+import javafx.scene.paint.Color;
+import org.junit.Test;
 
 /**
- * Created by dschmitz on 30.03.15.
+ * @author dschmitz
  */
 public class Ex3_5Test {
     public static Image transform(Image in, ColorTransformer colorTransformer) {
@@ -80,14 +79,14 @@ public class Ex3_5Test {
 //        storeImage(newImage);
     }
 
-    private void storeImage(Image newImage) throws IOException {
+    protected void storeImage(Image newImage) throws IOException {
         java.awt.image.RenderedImage bufferedImage = fromFXImage(newImage, null);
         File out = File.createTempFile("test", ".png");
         ImageIO.write(bufferedImage, "png", out);
         System.out.println("Image should be white " + out.getAbsolutePath());
     }
 
-    private Image loadImage() {
+    protected Image loadImage() {
         return new Image(Ex3_5Test.class.getResourceAsStream("file.png"));
     }
 
