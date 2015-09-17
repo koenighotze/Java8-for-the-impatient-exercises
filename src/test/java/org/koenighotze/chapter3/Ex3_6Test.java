@@ -1,13 +1,13 @@
 package org.koenighotze.chapter3;
 
-import java.io.IOException;
-import java.util.function.BiFunction;
-import java.util.stream.IntStream;
-
 import javafx.scene.image.Image;
 import javafx.scene.image.WritableImage;
 import javafx.scene.paint.Color;
 import org.junit.Test;
+
+import java.io.IOException;
+import java.util.function.BiFunction;
+import java.util.stream.IntStream;
 
 /**
  * Created by dschmitz on 17/06/15.
@@ -40,10 +40,10 @@ public class Ex3_6Test extends Ex3_5Test {
 
     @Test
     public void transformation() throws IOException {
-        Image image = loadImage();
-        storeImage(image);
+        Image image = ImageHelper.loadImage();
+        ImageHelper.storeImage(image);
         Image transform = transform(image, (color, i) -> color.deriveColor(i, 1, i, 1), 0.3d);
-        storeImage(transform);
+        ImageHelper.storeImage(transform);
     }
 
 
