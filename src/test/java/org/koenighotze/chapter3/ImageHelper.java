@@ -3,15 +3,12 @@ package org.koenighotze.chapter3;
 import static java.util.stream.IntStream.range;
 import static javafx.embed.swing.SwingFXUtils.fromFXImage;
 
-import java.io.File;
-import java.io.IOException;
-import java.util.stream.IntStream;
-import javax.imageio.ImageIO;
+import java.io.*;
+import java.util.stream.*;
+import javax.imageio.*;
 
-import javafx.scene.image.Image;
-import javafx.scene.image.PixelReader;
-import javafx.scene.image.WritableImage;
-import javafx.scene.paint.Color;
+import javafx.scene.image.*;
+import javafx.scene.paint.*;
 
 /**
  * @author dschmitz

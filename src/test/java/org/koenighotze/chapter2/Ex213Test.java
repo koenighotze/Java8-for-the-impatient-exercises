@@ -1,16 +1,15 @@
 package org.koenighotze.chapter2;
 
-import org.junit.BeforeClass;
-import org.junit.Test;
-
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.stream.Stream;
-
-import static org.hamcrest.CoreMatchers.*;
+import static java.util.stream.Collectors.counting;
+import static java.util.stream.Collectors.groupingBy;
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
-import static java.util.stream.Collectors.*;
+
+import java.util.*;
+import java.util.stream.*;
+
+import org.junit.*;
 /**
  * Created by dschmitz on 13.02.15.
  */
@@ -25,7 +24,7 @@ public class Ex213Test {
 
     @Test
     public void testUsingGroups() throws Exception {
-        Stream<String> wordStream = this.words.stream();
+        Stream<String> wordStream = words.stream();
         int[] expected = new int[] { 0, 1826, 4999, 7637, 6166, 3589 };
         assertThat(countShortWords(wordStream), is(equalTo(expected)));
     }

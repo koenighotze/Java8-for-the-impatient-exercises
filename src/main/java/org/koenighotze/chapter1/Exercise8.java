@@ -1,7 +1,6 @@
 package org.koenighotze.chapter1;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by dschmitz on 16.12.14.

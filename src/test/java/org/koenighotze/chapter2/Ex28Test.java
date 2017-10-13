@@ -1,15 +1,12 @@
 package org.koenighotze.chapter2;
 
-import org.junit.Ignore;
-import org.junit.Test;
-
-import java.util.Iterator;
-import java.util.stream.IntStream;
-import java.util.stream.Stream;
-
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
+
+import java.util.stream.*;
+
+import org.junit.*;
 
 /**
  * Created by dschmitz on 12.02.15.

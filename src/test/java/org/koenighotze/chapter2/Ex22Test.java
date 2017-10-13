@@ -1,19 +1,8 @@
 package org.koenighotze.chapter2;
 
-import org.junit.Before;
-import org.junit.Test;
+import java.util.*;
 
-import java.io.IOException;
-import java.net.URISyntaxException;
-import java.net.URL;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
-
-import static org.junit.Assert.assertNotNull;
+import org.junit.*;
 
 /**
  * Created by dschmitz on 16.01.15.

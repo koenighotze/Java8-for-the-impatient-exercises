@@ -1,11 +1,9 @@
 package org.koenighotze.chapter2;
 
-import org.junit.Test;
+import java.util.*;
+import java.util.stream.*;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.IntStream;
-import java.util.stream.Stream;
+import org.junit.*;
 
 /**
  * Created by dschmitz on 10.02.15.
@@ -21,7 +19,7 @@ public class Ex26Test {
     @Test
     public void testEx26() throws Exception {
         String str = "Hello World";
-        characterStream(str).forEach(c -> System.out.println(c));
+        characterStream(str).forEach(System.out::println);
 
         IntStream
                 .range(0, str.length())

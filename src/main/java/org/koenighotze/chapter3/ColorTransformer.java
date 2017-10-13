@@ -1,6 +1,6 @@
 package org.koenighotze.chapter3;
 
-import javafx.scene.paint.Color;
+import javafx.scene.paint.*;
 
 /**
  * Created by dschmitz on 30.03.15.

@@ -1,8 +1,7 @@
 package org.koenighotze.chapter3;
 
-import java.util.function.Supplier;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.util.function.*;
+import java.util.logging.*;
 
 /**
  * Created by dschmitz on 24.03.15.

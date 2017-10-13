@@ -10,20 +10,18 @@ import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
-import java.util.List;
-import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.TimeUnit;
-import java.util.stream.Stream;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.stream.*;
 
-import org.junit.Test;
+import org.junit.*;
 
 /**
  * @author David Schmitz
  */
 public class Ex3_22Test {
 
-    public static void sleeper(TimeUnit unit, long duration) {
+    private static void sleeper(TimeUnit unit, long duration) {
         try {
             sleep(unit.toMillis(duration));
         } catch (InterruptedException e) {

@@ -1,6 +1,6 @@
 package org.koenighotze.chapter3;
 
-import org.junit.Test;
+import org.junit.*;
 
 /**
  * @author dschmitz

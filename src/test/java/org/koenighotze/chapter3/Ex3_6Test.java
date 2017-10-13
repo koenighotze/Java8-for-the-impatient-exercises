@@ -1,13 +1,12 @@
 package org.koenighotze.chapter3;
 
-import javafx.scene.image.Image;
-import javafx.scene.image.WritableImage;
-import javafx.scene.paint.Color;
-import org.junit.Test;
+import java.io.*;
+import java.util.function.*;
+import java.util.stream.*;
 
-import java.io.IOException;
-import java.util.function.BiFunction;
-import java.util.stream.IntStream;
+import javafx.scene.image.*;
+import javafx.scene.paint.*;
+import org.junit.*;
 
 /**
  * Created by dschmitz on 17/06/15.

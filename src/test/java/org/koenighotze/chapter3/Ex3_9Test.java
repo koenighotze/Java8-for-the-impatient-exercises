@@ -1,16 +1,14 @@
 package org.koenighotze.chapter3;
 
-import org.junit.Test;
-
-import java.lang.reflect.Field;
-import java.math.BigDecimal;
-import java.util.Arrays;
-import java.util.Comparator;
-
 import static java.math.BigDecimal.ONE;
 import static java.math.BigDecimal.TEN;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.assertj.core.api.Assertions.assertThat;
+
+import java.lang.reflect.*;
+import java.math.*;
+import java.util.*;
+
+import org.junit.*;
 
 /**
  * @author dschmitz
@@ -27,7 +25,8 @@ public class Ex3_9Test {
         }
     }
 
-    public static Comparator<Object> lexicographicComparator(String... fields) {
+    @SuppressWarnings("unchecked")
+    private static Comparator<Object> lexicographicComparator(String... fields) {
         Comparator<Object> result = Comparator.comparing((o) -> {
             Object val = getFieldValue(o, fields[0]);
             return (Comparable) val;
@@ -45,7 +44,7 @@ public class Ex3_9Test {
     public void naive_test() {
         Comparator<Object> comparator = lexicographicComparator("name", "lastname");
 
-        assertEquals(comparator.compare(new SimpleA("foo", "", null), new SimpleB("foo", "", null)), 0);
+        assertThat(0).isEqualTo(comparator.compare(new SimpleA("foo", "", null), new SimpleB("foo", "", null)));
     }
 
     @Test
@@ -53,7 +52,7 @@ public class Ex3_9Test {
 
         Comparator<Object> comparator = lexicographicComparator("name", "lastname");
 
-        assertEquals(comparator.compare(new SimpleA("Foo", "Bar", ONE), new SimpleB("Foo", "bar", TEN)), 0);
+        assertThat(0).isEqualTo(comparator.compare(new SimpleA("Foo", "Bar", ONE), new SimpleB("Foo", "bar", TEN)));
     }
 
     @Test
@@ -61,7 +60,7 @@ public class Ex3_9Test {
 
         Comparator<Object> comparator = lexicographicComparator("name", "lastname");
 
-        assertEquals(comparator.compare(new SimpleA("Foo", "Bar", ONE), new SimpleB("Foo", "Bar", TEN)), 0);
+        assertThat(0).isEqualTo(comparator.compare(new SimpleA("Foo", "Bar", ONE), new SimpleB("Foo", "Bar", TEN)));
     }
 
     @Test
@@ -72,7 +71,7 @@ public class Ex3_9Test {
 
         // if we compared all fields, then we would fail with a NPE!
 
-        assertTrue(comparator.compare(simpleA, simpleB) < 0);
+        assertThat(comparator.compare(simpleA, simpleB) < 0).isTrue();
     }
 
     @SuppressWarnings("unused")

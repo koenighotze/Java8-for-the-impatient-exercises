@@ -1,18 +1,15 @@
 package org.koenighotze.chapter2;
 
-import org.junit.Test;
-
-import java.util.Arrays;
-import java.util.concurrent.atomic.AtomicInteger;
-import java.util.function.Function;
-import java.util.function.Supplier;
-import java.util.stream.IntStream;
-import java.util.stream.Stream;
-
 import static java.util.stream.Stream.of;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
+
+import java.util.*;
+import java.util.concurrent.atomic.*;
+import java.util.stream.*;
+
+import org.junit.*;
 
 /**
  * Created by dschmitz on 13.02.15.
@@ -35,7 +32,7 @@ public class Ex212Test {
 
         shortWords.parallel().filter(w -> w.length() < 6).forEach(w -> count[w.length()].incrementAndGet());
 
-        return Arrays.stream(count).mapToInt(a -> a.get()).toArray();
+        return Arrays.stream(count).mapToInt(AtomicInteger::get).toArray();
     }
 
 

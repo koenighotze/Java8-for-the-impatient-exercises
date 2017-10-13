@@ -1,9 +1,8 @@
 package org.koenighotze.chapter3;
 
-import org.junit.Test;
-
-import static org.junit.Assert.*;
 import static org.koenighotze.chapter3.Assert.myAssert;
+
+import org.junit.*;
 
 public class AssertTest {
     @Test

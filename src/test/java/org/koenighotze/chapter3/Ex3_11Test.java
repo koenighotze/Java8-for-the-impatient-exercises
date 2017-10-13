@@ -9,13 +9,12 @@ import static org.koenighotze.chapter3.ImageHelper.loadImage;
 import static org.koenighotze.chapter3.ImageHelper.storeImage;
 import static org.koenighotze.chapter3.ImageHelper.transform;
 
-import java.io.IOException;
-import java.util.function.UnaryOperator;
+import java.io.*;
+import java.util.function.*;
 
-import javafx.scene.image.Image;
-import javafx.scene.image.PixelReader;
-import javafx.scene.paint.Color;
-import org.junit.Test;
+import javafx.scene.image.*;
+import javafx.scene.paint.*;
+import org.junit.*;
 
 /**
  * @author dschmitz

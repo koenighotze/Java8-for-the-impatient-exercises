@@ -1,17 +1,14 @@
 package org.koenighotze.chapter2;
 
-import org.junit.Before;
-import org.junit.Test;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.function.BiFunction;
-import java.util.function.BinaryOperator;
-import java.util.stream.Stream;
-
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
+
+import java.util.*;
+import java.util.function.*;
+import java.util.stream.*;
+
+import org.junit.*;
 
 /**
  * Created by dschmitz on 12.02.15.

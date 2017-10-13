@@ -1,17 +1,14 @@
 package org.koenighotze.chapter3;
 
-import org.junit.Before;
-import org.junit.Test;
-
-import java.util.concurrent.atomic.LongAdder;
-import java.util.function.*;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import java.util.stream.IntStream;
-
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
+
+import java.util.concurrent.atomic.*;
+import java.util.logging.*;
+import java.util.stream.*;
+
+import org.junit.*;
 
 /**
  * Created by dschmitz on 14.03.15.

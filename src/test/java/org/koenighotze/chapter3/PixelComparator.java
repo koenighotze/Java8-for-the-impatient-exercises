@@ -1,6 +1,6 @@
 package org.koenighotze.chapter3;
 
-import javafx.scene.image.PixelReader;
+import javafx.scene.image.*;
 
 /**
  * @author dschmitz

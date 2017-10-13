@@ -7,5 +7,5 @@ public interface J {
     default void f() {
 
         System.out.println("J.F");
-    };
+    }
 }

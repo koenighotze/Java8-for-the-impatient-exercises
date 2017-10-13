@@ -1,6 +1,6 @@
 package org.koenighotze.chapter3;
 
-import java.util.function.Supplier;
+import java.util.function.*;
 
 /**
  * Created by dschmitz on 24.03.15.

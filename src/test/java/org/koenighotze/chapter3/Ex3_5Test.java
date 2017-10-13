@@ -1,16 +1,19 @@
 package org.koenighotze.chapter3;
 
-import javafx.scene.image.Image;
-import javafx.scene.paint.Color;
-import org.junit.Test;
-
-import java.util.stream.IntStream;
-
 import static javafx.scene.paint.Color.WHITE;
-import static org.hamcrest.CoreMatchers.*;
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.CoreMatchers.not;
+import static org.hamcrest.CoreMatchers.nullValue;
 import static org.junit.Assert.assertThat;
 import static org.koenighotze.chapter3.ImageHelper.loadImage;
 import static org.koenighotze.chapter3.ImageHelper.transform;
+
+import java.util.stream.*;
+
+import javafx.scene.image.*;
+import javafx.scene.paint.*;
+import org.junit.*;
 
 /**
  * @author dschmitz

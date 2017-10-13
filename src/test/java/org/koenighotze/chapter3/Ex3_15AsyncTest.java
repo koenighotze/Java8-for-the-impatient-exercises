@@ -8,11 +8,10 @@ import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
-import java.util.LinkedList;
-import java.util.List;
-import java.util.function.UnaryOperator;
+import java.util.*;
+import java.util.function.*;
 
-import org.junit.Test;
+import org.junit.*;
 
 /**
  * @author David Schmitz

@@ -6,5 +6,5 @@ package org.koenighotze.chapter1;
 public interface I {
     static void f() {
         System.out.println("I.F");
-    };
+    }
 }

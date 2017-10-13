@@ -1,12 +1,11 @@
 package org.koenighotze.chapter2;
 
-import org.junit.Test;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.within;
 
-import java.util.stream.DoubleStream;
-import java.util.stream.Stream;
+import java.util.stream.*;
 
-import static org.hamcrest.CoreMatchers.*;
-import static org.junit.Assert.*;
+import org.junit.*;
 
 /**
  * Created by dschmitz on 13.02.15.
@@ -17,7 +16,7 @@ public class Ex210Test {
         // This wont work as the stream is already closed
 //        Double reduce = stream.reduce(0d, (a, b) -> a + b);
 
-        return stream.mapToDouble(d -> d.doubleValue()).average().getAsDouble();
+        return stream.mapToDouble(Double::doubleValue).average().getAsDouble();
     }
 
 
@@ -25,7 +24,7 @@ public class Ex210Test {
     public void testCalc() throws Exception {
         Double res = avg(DoubleStream.of(0.5d, 1.3d, 2.0d, 6.1d).boxed());
 
-        assertEquals(2.475d, res, 0.00001d);
+        assertThat(res).isCloseTo(2.475d, within(0.00001d));
     }
 
 

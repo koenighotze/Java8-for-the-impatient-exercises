@@ -1,12 +1,12 @@
 package org.koenighotze.chapter1;
 
-import org.junit.Test;
+import static java.util.Comparator.comparing;
 
-import java.io.File;
-import java.util.Arrays;
-import java.util.stream.Stream;
+import java.io.*;
+import java.util.*;
+import java.util.stream.*;
 
-import static java.util.Comparator.*;
+import org.junit.*;
 /**
  * Created by dschmitz on 15.12.14.
  */
@@ -19,7 +19,7 @@ public class ExercisesTest {
     public void exercise2() {
         File file = new File("/Users/dschmitz");
 
-        System.out.println(Arrays.toString(file.listFiles(f -> f.isDirectory())));
+        System.out.println(Arrays.toString(file.listFiles(File::isDirectory)));
 
         System.out.println(Arrays.toString(file.listFiles(File::isDirectory)));
     }

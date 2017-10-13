@@ -2,24 +2,21 @@ package org.koenighotze.chapter3;
 
 import static java.util.Objects.requireNonNull;
 import static javafx.scene.paint.Color.WHITE;
-import static org.junit.Assert.assertEquals;
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.Assert.assertNotEquals;
 import static org.koenighotze.chapter3.Ex3_11Test.simpleTransformer;
 import static org.koenighotze.chapter3.ImageHelper.assertImage;
 import static org.koenighotze.chapter3.ImageHelper.loadImage;
 import static org.koenighotze.chapter3.ImageHelper.storeImage;
 
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.function.UnaryOperator;
-import java.util.stream.IntStream;
+import java.io.*;
+import java.util.*;
+import java.util.function.*;
+import java.util.stream.*;
 
-import javafx.scene.image.Image;
-import javafx.scene.image.PixelReader;
-import javafx.scene.image.WritableImage;
-import javafx.scene.paint.Color;
-import org.junit.Test;
+import javafx.scene.image.*;
+import javafx.scene.paint.*;
+import org.junit.*;
 
 /**
  * @author dschmitz
@@ -75,7 +72,7 @@ public class Ex3_12Test {
         Image result = LatentImage.from(original).toImage();
 
         PixelReader originalReader = original.getPixelReader();
-        assertImage(result, (reader, x, y) -> assertEquals(originalReader.getColor(x, y), reader.getColor(x, y)));
+        assertImage(result, (reader, x, y) -> assertThat(reader.getColor(x, y)).isEqualTo(originalReader.getColor(x, y)));
 
         storeImage(result);
     }

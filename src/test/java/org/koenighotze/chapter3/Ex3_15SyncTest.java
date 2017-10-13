@@ -5,12 +5,9 @@ import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
-import java.util.LinkedList;
-import java.util.List;
-import java.util.function.Function;
-import java.util.function.UnaryOperator;
+import java.util.function.*;
 
-import org.junit.Test;
+import org.junit.*;
 
 /**
  * @author David Schmitz
@@ -29,7 +26,7 @@ public class Ex3_15SyncTest {
         }
 
         public StringHandler then(UnaryOperator<String> operation) {
-            ops = ops.andThen(operation::apply);
+            ops = ops.andThen(operation);
             return this;
         }
 
